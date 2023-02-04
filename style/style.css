@@ -194,7 +194,7 @@ aside section {
   gap: 1rem;
   position: relative;
 }
-aside section h4 {
+aside section h3 {
   color: hsl(36deg, 100%, 99%);
   font-size: 1.25rem;
   transition: 0.3s;
@@ -226,7 +226,7 @@ aside hr {
   aside section:not(:last-child) {
     padding-bottom: 0.875rem;
   }
-  aside section h4 {
+  aside section h3 {
     font-size: 1rem;
   }
   aside section p {
