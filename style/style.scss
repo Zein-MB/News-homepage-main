@@ -242,7 +242,7 @@ aside {
     font-size: 2.1875rem;
   }
 
-  section {
+  .article {
     display: grid;
     gap: 1rem;
     position: relative;
@@ -280,7 +280,7 @@ aside {
       font-size: 1.875rem;
     }
 
-    section {
+    .article {
       gap: 0.875rem;
 
       &:not(:last-child) {
