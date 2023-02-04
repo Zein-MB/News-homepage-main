@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+header {
+  padding: 6rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar img {
+  display: none;
+  cursor: pointer;
+}
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  transition: 0.2s ease;
+}
+header .navbar ul li {
+  color: hsl(236deg, 13%, 42%);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+header .navbar ul li:hover {
+  color: hsl(34deg, 77%, 62%);
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 1em 0;
+  }
+  header .navbar .open-menu {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+  header .navbar ul {
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    background: #fff;
+    height: 100%;
+    padding-top: 160px;
+    top: 0;
+    right: -70%;
+    width: 70%;
+  }
+  header .navbar ul .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  header .navbar ul li {
+    width: 100%;
+    padding-left: 25px;
+    font-size: 18px;
+  }
+  header .navbar ul.active {
+    right: 0;
+  }
+}
+.container.main {
+  display: grid;
+  grid-template-columns: 2.25fr 1fr;
+  gap: 1.875rem;
+}
+
+@media (max-width: 767px) {
+  .container.main {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+main picture img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+main .text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-top: 1.875rem;
+}
+main .text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 3.5rem;
+}
+main .text section {
+  display: grid;
+  gap: 2.5rem;
+}
+main .text section p {
+  font-size: 1rem;
+  color: hsl(236deg, 13%, 42%);
+  line-height: 1.5;
+}
+main .text section button {
+  background-color: hsl(5deg, 85%, 63%);
+  color: hsl(36deg, 100%, 99%);
+  padding: 0.8rem 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 53%;
+}
+main .text section button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+
+@media (max-width: 767px) {
+  main .text {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  main .text h1 {
+    font-size: 2.125rem;
+    line-height: 1;
+  }
+  main .text section {
+    gap: 20px;
+  }
+  main .text section p {
+    font-size: 0.8125rem;
+  }
+  main .text section button {
+    font-size: 0.875rem;
+  }
+}
+aside {
+  background-color: hsl(240deg, 100%, 5%);
+  display: grid;
+  grid-template-rows: 50px 82%;
+  gap: 1rem;
+  padding-inline: 1.5rem;
+  padding-top: 1.5rem;
+}
+aside h2 {
+  color: hsl(34deg, 77%, 62%);
+  font-size: 2.1875rem;
+}
+aside section {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+aside section h4 {
+  color: hsl(36deg, 100%, 99%);
+  font-size: 1.25rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+aside section h4:hover {
+  color: hsl(34deg, 77%, 62%);
+}
+aside section p {
+  color: hsl(233deg, 8%, 79%);
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+aside hr {
+  height: 0;
+}
+
+@media (max-width: 767px) {
+  aside {
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  aside h2 {
+    font-size: 1.875rem;
+  }
+  aside section {
+    gap: 0.875rem;
+  }
+  aside section:not(:last-child) {
+    padding-bottom: 0.875rem;
+  }
+  aside section h4 {
+    font-size: 1rem;
+  }
+  aside section p {
+    font-size: 0.75rem;
+  }
+}
+.container.suggested-articles {
+  padding: 4rem 0 6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.9375rem;
+}
+.container.suggested-articles article {
+  width: 21rem;
+  max-width: 100%;
+  height: 8rem;
+  max-height: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.container.suggested-articles article:last-child {
+  flex: 1;
+}
+.container.suggested-articles article img {
+  max-width: 100%;
+}
+.container.suggested-articles article section span {
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: hsl(233deg, 8%, 79%);
+}
+.container.suggested-articles article section h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: hsl(240deg, 100%, 5%);
+  margin: 0.25rem 0 0.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container.suggested-articles article section h4:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+.container.suggested-articles article section p {
+  font-size: 0.9375rem;
+  color: hsl(236deg, 13%, 42%);
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .container.suggested-articles {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .container.suggested-articles article {
+    width: auto;
+    height: 6rem;
+  }
+  .container.suggested-articles article img {
+    height: 6rem;
+  }
+  .container.suggested-articles article section span {
+    font-size: 1.625rem;
+  }
+  .container.suggested-articles article section h4 {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+  }
+  .container.suggested-articles article section p {
+    font-size: 0.8125rem;
+  }
+}
