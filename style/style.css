@@ -189,21 +189,21 @@ aside h2 {
   color: hsl(34deg, 77%, 62%);
   font-size: 2.1875rem;
 }
-aside section {
+aside .article {
   display: grid;
   gap: 1rem;
   position: relative;
 }
-aside section h3 {
+aside .article h3 {
   color: hsl(36deg, 100%, 99%);
   font-size: 1.25rem;
   transition: 0.3s;
   cursor: pointer;
 }
-aside section h4:hover {
+aside .article h4:hover {
   color: hsl(34deg, 77%, 62%);
 }
-aside section p {
+aside .article p {
   color: hsl(233deg, 8%, 79%);
   font-size: 0.9375rem;
   line-height: 1.8;
@@ -220,16 +220,16 @@ aside hr {
   aside h2 {
     font-size: 1.875rem;
   }
-  aside section {
+  aside .article {
     gap: 0.875rem;
   }
-  aside section:not(:last-child) {
+  aside .article:not(:last-child) {
     padding-bottom: 0.875rem;
   }
-  aside section h3 {
+  aside .article h3 {
     font-size: 1rem;
   }
-  aside section p {
+  aside .article p {
     font-size: 0.75rem;
   }
 }
